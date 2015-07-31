@@ -77,7 +77,7 @@ def history(request):
 def repeat(request,artist_id=None):
 	h=History(name=artist_id,user=request.user,hist_date=timezone.now())
 	h.save()
-	v,z=demo_script(artist_name)
+	v,z=demo_script(artist_id)
 	e=v['toptracks']
 	m=z['similarartists']
 	return render_to_response('search.html',{'s':m,'k':e,'full_name':request.user.username}, context_instance=RequestContext(request))
