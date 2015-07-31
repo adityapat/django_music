@@ -53,7 +53,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'demo.urls'
-TEMPLATE_DIRS=['/root/Desktop/last_django/demo/templates']
+TEMPLATE_DIRS=[os.path.join(BASE_DIR,'templates')]
 
 '''TEMPLATES = [
     {
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':'/root/Desktop/last_django/demo/storage.db',
+        'NAME':os.path.join(BASE_DIR,'storage.db'),
     }
 }
 
