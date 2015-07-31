@@ -27,6 +27,6 @@ urlpatterns = [
     url(r'^logout/$','demo1.views.logout'),
     url(r'^history/$','demo1.views.history'),
     url(r'^$','demo1.views.home'),
-    url(r'^get/(?P<artist_id>\w+)/$','demo1.views.repeat')	
+    url(r'^get/(?P<artist_id>[\w\ ]+)/$','demo1.views.repeat') 
    		
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
